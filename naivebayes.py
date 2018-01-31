@@ -70,13 +70,7 @@ class NaiveBayes:
         self._prior_probabilities=prior_probabilities
         self._likelihood_probabilities=likelihood_probabilities
         self._likelihood_probability_arguments=likelihood_probability_arguments
-        package=[]
-        package.append(continuous_columns)
-        package.append(categorical_columns)
-        package.append(prior_probabilities)
-        package.append(likelihood_probabilities)
-        package.append(likelihood_probability_arguments)
-        return package
+       
     
     def predict(self,test_data_features):
         #lets find posterior probability P(C|X)=P(C)*P(X|C)/P(X)
